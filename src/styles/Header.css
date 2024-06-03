@@ -1,6 +1,22 @@
 .header {
-    background-color: #333;
-    color: white;
+    background-color: #fff;
+    color: black;
     padding: 1rem;
-    text-align: center;
+    display: flex;
+    justify-content: space-between; /* 아이콘들을 좌우로 분산 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+}
+
+.logo {
+    width: 200px; /* 로고 이미지 너비 설정 */
+}
+
+.icons {
+    display: flex; /* 아이콘들을 가로로 배치 */
+    gap: 1rem; /* 아이콘들 사이의 간격 */
+}
+
+.icon {
+    width: 24px; /* 아이콘 이미지 너비 설정 */
+    height: 24px; /* 아이콘 이미지 높이 설정 */
 }
