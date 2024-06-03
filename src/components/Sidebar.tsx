@@ -1,4 +1,6 @@
+// Sidebar.tsx
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/Sidebar.css';
 
 const Sidebar: React.FC = () => {
@@ -6,7 +8,8 @@ const Sidebar: React.FC = () => {
         <aside className="sidebar">
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/post">글쓰기</Link></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Contact</a></li>
