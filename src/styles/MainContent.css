@@ -1,5 +1,49 @@
 .main-content {
     flex: 1;
     padding: 1rem;
-    background-color: #fff;
+    background-color: #EFEFEF;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.tab {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.tab:hover {
+    background-color: #0056b3;
+}
+
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.post {
+    background-color: white;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(25% - 1rem); /* 4개의 게시물이 한 줄에 들어가도록 설정 */
+    box-sizing: border-box;
+}
+
+.post h3 {
+    margin-top: 0;
+}
+
+.post p {
+    margin: 0.5rem 0 0;
 }

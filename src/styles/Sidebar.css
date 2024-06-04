@@ -1,19 +1,106 @@
 .sidebar {
-    width: 200px;
+    width: 250px;
+    transition: width 0.3s;
     background-color: #f4f4f4;
-    padding: 1rem;
+    position: relative;
 }
 
-.sidebar nav ul {
-    list-style-type: none;
+.sidebar.collapsed {
+    width: 80px;
+}
+
+.toggle-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    top: 20px; /* 변경된 값 */
+    z-index: 1;
+    transition: all 0.3s;
+}
+
+.sidebar.collapsed .toggle-button {
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px 10px 20px; /* 변경된 값 */
+    position: relative; /* 부모 요소에 상대 위치 설정 */
+}
+
+.profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: width 0.3s, height 0.3s;
+}
+
+.sidebar.collapsed .profile-image {
+    width: 30px;
+    height: 30px;
+}
+
+.login-button {
+    margin-top: 20px; /* 로그인 버튼과 프로필 이미지 사이 간격 설정 */
+    position: absolute; /* 절대 위치 설정 */
+    right: 30px; /* 부모 요소의 오른쪽 끝에 위치 */
+    top: 55px; /* 변경된 값 */
+}
+
+nav ul {
+    list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.sidebar nav ul li {
-    margin-bottom: 1rem;
+nav ul li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
 }
 
-.sidebar nav ul li a {
+nav ul li a {
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    color: #333;
+    color: inherit;
+    width: 100%;
+    transition: justify-content 0.3s;
+}
+
+.nav-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    transition: margin-right 0.3s;
+}
+
+.nav-text {
+    display: inline-block;
+    transition: opacity 0.3s, width 0.3s;
+}
+
+.sidebar.collapsed nav ul li {
+    justify-content: center;
+}
+
+.sidebar.collapsed nav ul li a {
+    justify-content: center;
+}
+
+.sidebar.collapsed .nav-icon {
+    margin-right: 0;
+}
+
+.sidebar.collapsed .nav-text {
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
 }
