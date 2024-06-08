@@ -1,5 +1,6 @@
 .header {
-    background-color: #fff;
+    background-color: #FFF;
+    border-radius: 5px;
     color: black;
     padding: 1rem;
     display: flex;
@@ -8,12 +9,12 @@
 }
 
 .logo {
-    width: 200px; /* 로고 이미지 너비 설정 */
+    width: auto; /* 로고 이미지 너비 설정 */
 }
 
 .icons {
     display: flex; /* 아이콘들을 가로로 배치 */
-    gap: 1rem; /* 아이콘들 사이의 간격 */
+    gap: 1.5rem; /* 아이콘들 사이의 간격 */
 }
 
 .icon {

@@ -1,5 +1,6 @@
 import React from 'react';
 import '../modal/Login';
+import {GlobalStyle} from "../../styles/styled/GlobalStyle";
 
 interface LoginProps {
     onClose: () => void;
@@ -8,6 +9,7 @@ interface LoginProps {
 const Login: React.FC<LoginProps> = ({ onClose }) => {
     return (
         <div className="login-modal">
+            <GlobalStyle />
             <div className="login-modal-content">
                 <span className="close-button" onClick={onClose}>&times;</span>
                 <h2>로그인</h2>

@@ -1,9 +1,11 @@
 import React from 'react';
 import '../styles/MainContent.css';
+import {GlobalStyle} from "../styles/styled/GlobalStyle";
 
 const MainContent: React.FC = () => {
     return (
         <main className="main-content">
+            <GlobalStyle />
             <div className="tabs">
                 <button className="tab">최근 게시물</button>
                 <button className="tab">인기 게시물</button>

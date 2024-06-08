@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Sidebar.css';
 import Login from './modal/Login';
+import {GlobalStyle} from "../styles/styled/GlobalStyle";
 
 const Sidebar: React.FC = () => {
     const [showLogin, setShowLogin] = useState(false);
@@ -21,6 +22,7 @@ const Sidebar: React.FC = () => {
 
     return (
         <aside className={`sidebar ${isCollapsed ? 'collapsed' : ''}`}>
+            <GlobalStyle />
             <button className={`toggle-button ${isCollapsed ? 'collapsed' : ''}`} onClick={toggleSidebar}>
                 <img src={`/images/sidebar/${isCollapsed ? 'arrow_right' : 'arrow_left'}.svg`} alt="Toggle Sidebar" />
             </button>
